@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: todo-backend-api
+    runtime: node
+    rootDir: todo-backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://mikky16:mikky@cluster0.b1xsvau.mongodb.net/mikky16?retryWrites=true&w=majority&appName=Cluster0
+      - key: JWT_SECRET
+        value: super_secret_jwt_key_for_todo_backend_dev
